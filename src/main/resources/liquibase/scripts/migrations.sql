@@ -15,4 +15,10 @@ create table notification
 alter table notification
     owner to "Delegant";
 
+-- changeset kadachigov:2
+
+alter table notification
+drop column sent_date,
+drop column status;
+
 

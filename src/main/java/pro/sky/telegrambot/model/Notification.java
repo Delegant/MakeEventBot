@@ -14,24 +14,10 @@ public class Notification {
 
     private String notificationMessage;
 
-    private LocalDateTime sentDate;
-
     private LocalDateTime notificationDate;
-
-    @Enumerated(EnumType.STRING)
-    private NotificationStatus status = NotificationStatus.SCHEDULED;
 
     public Long getChat_id() {
         return chat_id;
-    }
-
-    public String getNotificationMessage() {
-        return notificationMessage;
-    }
-
-    public enum NotificationStatus {
-        SCHEDULED,
-        SENT,
     }
 
     public Notification() {
@@ -43,7 +29,9 @@ public class Notification {
         this.chat_id = chat_id;
     }
 
-
+    public String getNotificationMessage() {
+        return notificationMessage;
+    }
 
 }
 
